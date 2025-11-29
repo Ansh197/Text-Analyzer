@@ -1,5 +1,10 @@
 import './Navbar.css'
 export default function Navbar(props) {
+
+  const handleLogin = () =>{
+    console.log('Login button clicked')
+  }
+
   return (
     <>
     <div className='navbar' style={props.mystyle} >
@@ -10,7 +15,7 @@ export default function Navbar(props) {
     </div>
     <button id='login' style={{color : `${props.mode==='Dark'?'black':'white'}`,
     backgroundColor :`${props.mode==='Dark'?'rgb(234, 232, 232)':'rgb(41, 41, 41)'}`}
-  }>
+  } onClick={handleLogin}>
       Login</button>
     </div>
     </>
